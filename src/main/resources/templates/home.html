@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <main>
+        <h1>Bem-vinda ao Sistema Acadêmico</h1>
+        <p>Use o menu abaixo para cadastrar ou visualizar alunos, professores e orientações.</p>
+    </main>
+
+    <ul>
+        <li><a th:href="@{/alunos/novo}">Cadastrar Aluno</a></li>
+        <li><a th:href="@{/alunos}">Listar Alunos</a></li>
+        <li><a th:href="@{/professor/novo}">Cadastrar Professor</a></li>
+        <li><a th:href="@{/professores}">Listar Professores</a></li>
+        <li><a th:href="@{/orientacao/nova}">Cadastrar Orientação</a></li>
+        <li><a th:href="@{/orientacoes}">Listar Orientações</a></li>
+        <a th:href="@{/}"></a>
+    </ul>
+</body>
+
+</html>

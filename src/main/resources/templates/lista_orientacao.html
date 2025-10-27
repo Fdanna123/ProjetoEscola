@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+
+<head>
+    <title>Orientações</title>
+</head>
+
+<body>
+    <h2>Lista de Orientações</h2>
+    <a th:href="@{/orientacao/nova}">Nova Orientação</a>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Tema</th>
+            <th>Professor</th>
+            <th>Aluno</th>
+            <th>Status</th>
+        </tr>
+        <tr th:each="o : ${orientacoes}">
+            <td th:text="${o.id}"></td>
+            <td th:text="${o.tema}"></td>
+            <td th:text="${o.professor.nome}"></td>
+            <td th:text="${o.aluno.nome}"></td>
+            <td th:text="${o.status}"></td>
+        </tr>
+    </table>
+    <a th:href="@{/}">Voltar ao início</a>
+</body>
+
+</html>
